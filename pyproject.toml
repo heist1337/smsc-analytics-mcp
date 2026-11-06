@@ -1,0 +1,30 @@
+[project]
+name = "smsc-mcp"
+version = "0.1.0"
+description = "Independent smsc MCP server powered by FastMCP"
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["fastmcp==4.1.6"]
+
+[project.urls]
+Repository = "https://github.com/heist1337/smsc-analytics-mcp"
+Issues = "https://github.com/heist1337/smsc-analytics-mcp/issues"
+
+[project.scripts]
+smsc-mcp = "smsc_mcp.__main__:main"
+
+[dependency-groups]
+dev = ["ruff==0.17.3"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "RUF"]
+ignore = ["E501", "RUF001"]
+
+[build-system]
+requires = ["uv_build==0.11.33"]
+build-backend = "uv_build"

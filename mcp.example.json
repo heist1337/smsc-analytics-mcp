@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "smsc-mcp": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "/absolute/path/to/smsc-analytics-mcp",
+        "--locked",
+        "--env-file",
+        "/private/smsc-mcp.env",
+        "smsc-mcp"
+      ]
+    }
+  }
+}
